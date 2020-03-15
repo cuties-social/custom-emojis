@@ -13,5 +13,3 @@ then
 fi
 done
 
-tar cfz build/uncategorized.tar.gz *.{png,jpg,jpeg}
-
