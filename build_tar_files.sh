@@ -8,10 +8,10 @@ if [ "$d" != "build" ]
 then
 	cd $d
 	echo Packing $d.tar.gz
-	tar cf ../build/$d.tar.gz *
+	tar cfz ../build/$d.tar.gz *
 	cd ..
 fi
 done
 
-tar cf build/uncategorized.tar.gz *.{png,jpg,jpeg}
+tar cfz build/uncategorized.tar.gz *.{png,jpg,jpeg}
 
