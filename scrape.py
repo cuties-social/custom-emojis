@@ -4,7 +4,6 @@ Scrape custom emojis from a given mastodon instance
 
 import argparse
 import os
-#import json
 import re
 import requests
 
@@ -24,7 +23,7 @@ for emoji in emojis:
 	shortcode=emoji['shortcode']
 	category = 'uncategorized'	
 
-	if 'category' in emoji:
+	if 'category' in emoji and emoji['category']:
 		category = emoji['category']
 
 	print(url)
