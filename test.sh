@@ -2,7 +2,7 @@
 
 echo Listening to large files
 error=false
-limit=10k
+limit=50k
 
 for d in */ ; do
 d=${d%/}
