@@ -4,9 +4,9 @@ Scrape custom emojis from a given mastodon instance
 
 import argparse
 import os
-import json
+#import json
 import re
-from urllib import request
+import requests
 
 parser = argparse.ArgumentParser(description='Scrape custom emojis from mastodon servers to import/')
 parser.add_argument('instance',help='instance to scrape')
@@ -15,8 +15,7 @@ instance = args.instance
 print(instance)
 basepath="import/"
 
-data = request.urlopen("https://" + instance + "/api/v1/custom_emojis")
-emojis = json.loads(data.read())
+emojis = requests.get("https://" + instance + "/api/v1/custom_emojis").json()
 
 regex=r".*\/.*\.(png|jpeg|jpg)"
 
@@ -37,9 +36,5 @@ for emoji in emojis:
 	filepath=basepath  + instance + '/' + category + '/'+ shortcode + '.' + ext
 	print(filepath)
 	with open(filepath, 'wb') as f:
-		response = request.urlopen(url)
-		f.write(response.read())
-
-
-
+		f.write(requests.get(url).content)
 
