@@ -16,7 +16,7 @@ basepath="import/"
 
 emojis = requests.get("https://" + instance + "/api/v1/custom_emojis").json()
 
-regex=r".*\/.*\.(png|jpeg|jpg)"
+regex=r".*\/.*\.(png|jpeg|jpg|gif)"
 
 for emoji in emojis:
 	url=emoji['url']
