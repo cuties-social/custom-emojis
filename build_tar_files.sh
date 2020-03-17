@@ -4,7 +4,7 @@ mkdir -p build/
 
 for d in */ ; do
 d=${d%/}
-if [ "$d" != "build" ]
+if [ "$d" != "build" -a "$d" != "import" ]
 then
 	cd $d
 	echo Packing $d.tar.gz
