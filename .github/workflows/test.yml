@@ -1,0 +1,21 @@
+name: Test.sh
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: run test.sh
+      run: ./test.sh
+    - name: build tar files
+      run: ./build_tar_files.sh
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v1
+      with:
+        name: build
+        path: build/
+
