@@ -6,7 +6,7 @@ limit=50k
 
 for d in */ ; do
 d=${d%/}
-if [ "$d" != "build" ]
+if [ "$d" != "build" -a "$d" != "import" ]
 then
 	files=$(find "$d/" -type f -size +$limit -iregex '.*\.\(png\|jpg\|jpeg\)')
 	echo $files | grep -q .
