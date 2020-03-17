@@ -14,5 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: run test.sh
-      run: test.sh
+      run: ./test.sh
+    - name: build tar files
+      run: ./build_tar_files.sh
 
