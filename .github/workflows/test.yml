@@ -13,9 +13,9 @@ jobs:
       run: ./test.sh
     - name: build tar files
       run: ./build_tar_files.sh
-    - name: Upload artifacts
-      uses: actions/upload-artifact@v1
-      with:
-        name: build
-        path: build/
+#    - name: Upload artifacts
+#      uses: actions/upload-artifact@v1
+#      with:
+#        name: build
+#        path: build/
 
