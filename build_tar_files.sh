@@ -62,7 +62,7 @@ then
 	fi
 fi
 
-#mkdir -p build/
+mkdir -p build/
 
 for d in */ ; do
 d=${d%/}
