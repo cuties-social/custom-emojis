@@ -12,7 +12,7 @@ usage() {
 	echo ""
 	echo -e "\t-q\tQuiet, no output"
 	echo -e "\t-f\tForce, ignore failed test"
-	echo -e "\tprintf't run tests"
+	echo -e "\t-n\tDon't run tests"
 	echo -e "\t-u\tPrint usage (this) and exit"
 	echo -e "\t-h\tPrint usage (this) and exit"
 	echo -e ""
