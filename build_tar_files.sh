@@ -37,7 +37,7 @@ while getopts 'qfnuh' option; do
 	esac
 done
 
-if [ $runtest ]
+if $runtest
 then
 	output="$(bash ./test.sh)"
 	if [ $? != 0 ]
