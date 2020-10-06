@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 Scrape custom emojis from a given mastodon instance
 """
