@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 error=false
 limit=50k
